@@ -2,6 +2,8 @@
 
 The provided code sets up a comprehensive railway system simulation, which includes several critical functionalities for managing and operating a railway network. The core components of this system are:
 
+## Description
+
 * Graph Construction: Manages the network of tracks between stations, where each track has a start and end station and a weight (distance).
 
 * Train Scheduling: Uses Dijkstra's algorithm to calculate the shortest paths between stations and determine optimal train routes, considering track conditions.
@@ -17,3 +19,18 @@ The provided code sets up a comprehensive railway system simulation, which inclu
 * Platform Management: Calculates the minimum number of platforms required at a station based on train arrival and departure times.
 
 Overall, this system integrates route optimization, maintenance management, performance tracking, and real-time monitoring to provide a robust framework for efficient railway operation and planning.
+
+## Features:
+
+* Train routing with Dijkstra
+* Track condition monitoring
+* Real-time tracking
+* Performance monitoring
+* Maintenance scheduling
+* Platform requirement calculator
+
+### How to Run
+
+```bash
+python3 code.py
+```
