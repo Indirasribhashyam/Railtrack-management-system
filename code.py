@@ -2,7 +2,7 @@ import heapq
 from collections import defaultdict
 
 class Graph:
-    def _init_(self):
+    def __init__(self):
         self.nodes = set()
         self.edges = defaultdict(list)
 
@@ -13,7 +13,7 @@ class Graph:
         self.edges[end].append((start, weight))
 
 class TrainScheduler:
-    def _init_(self, graph):
+    def __init__(self, graph):
         self.graph = graph
 
     def dijkstra(self, start):
@@ -51,7 +51,7 @@ class TrainScheduler:
 
 
 class TrackMaintenanceScheduler:
-    def _init_(self):
+    def __init__(self):
         self.tasks = []
 
     def schedule_maintenance(self, task, priority):
@@ -64,7 +64,7 @@ class TrackMaintenanceScheduler:
             return None
 
 class TrainPerformanceMonitor:
-    def _init_(self):
+    def __init__(self):
         self.performance_data = defaultdict(list)
 
     def update_performance(self, train_id, speed, delay):
@@ -79,7 +79,7 @@ class TrainPerformanceMonitor:
         return sum(delays) / len(delays) if delays else 0
 
 class RealTimeTracking:
-    def _init_(self, graph):
+    def __init__(self, graph):
         self.graph = graph
         self.train_positions = {}
 
@@ -90,7 +90,7 @@ class RealTimeTracking:
         return self.train_positions.get(train_id, None)
 
 class TrackConditionMonitor:
-    def _init_(self):
+    def __init__(self):
         self.track_conditions = defaultdict(lambda: 'Good')
 
     def update_track_condition(self, track, condition):
@@ -104,7 +104,7 @@ class TrackConditionMonitor:
             return None  # Return None if condition is 'Good'
 
 class RailwaySystem:
-    def _init_(self):
+    def __init__(self):
         self.railway_network = Graph()
         self.train_scheduler = TrainScheduler(self.railway_network)
         self.track_maintenance_scheduler = TrackMaintenanceScheduler()
